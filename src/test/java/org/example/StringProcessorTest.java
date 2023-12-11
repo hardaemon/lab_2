@@ -29,6 +29,10 @@ public class StringProcessorTest {
         int expected = 2;
         StringProcessor SP = new StringProcessor();
         assertEquals(expected,SP.NumberOfOccurrences(s1,s2));
+        String s3 = "asasasa";
+        String s4 = "asa";
+        expected = 3;
+        assertEquals(expected,SP.NumberOfOccurrences(s3,s4));
     }
     @Test
     public void TestReplacement() {

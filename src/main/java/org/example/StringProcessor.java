@@ -19,7 +19,16 @@ public class StringProcessor {
         if (s2.equals("") || s2 == null) {
             throw new IllegalArgumentException("Exception");
         }
-        return s1.split(s2,-1).length-1;
+        int count = 0;
+        int countj = 0;
+        for (int i = 0; i < s1.length()-s2.length()+1; i++) {
+            for (int j = 0; j < s2.length(); j++) {
+                if (s1.charAt(i+j) == s2.charAt(j)) countj++;
+            }
+            if (countj == s2.length()) count++;
+            countj = 0;
+        }
+        return count;
     }
 
     public String Replacement(String s3) {
