@@ -59,9 +59,7 @@ public class FinanceReport {
         int rubles = 0;
         int cent = 0;
         for (int i = 0; i < array.length; i++) {
-            rubles = array[i].getAmount()/100;
-            cent = array[i].getAmount() - (array[i].getAmount()/100) * 100;
-            out2 = out2.concat(String.format("     Плательщик: %s, дата: %d.%d.%d сумма: %d руб. %d коп.\n", array[i].getName(), array[i].getDate(), array[i].getMonth(), array[i].getYear(), rubles, cent));
+            out2 = out2.concat(array[i].toString());
         }
         return out1 + out2 + "]]";
     }

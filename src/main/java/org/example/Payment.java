@@ -41,13 +41,9 @@ public class Payment {
 
     @Override
     public String toString() {
-        return "Payment{" +
-                "name='" + name + '\'' +
-                ", date=" + date +
-                ", month=" + month +
-                ", year=" + year +
-                ", amount=" + amount +
-                '}';
+        int rubles = amount/100;
+        int cent = amount - (amount/100) * 100;
+        return String.format("     Плательщик: %s, дата: %d.%d.%d сумма: %d руб. %d коп.\n", name, date, month, year, rubles, cent);
     }
 
     @Override
