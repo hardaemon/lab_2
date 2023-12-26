@@ -79,6 +79,9 @@ public class FinanceReportTest {
         assertEquals(FR.getCreation_date(), copyFR.getCreation_date());
         assertEquals(FR.getCreation_month(), copyFR.getCreation_month());
         assertEquals(FR.getCreation_year(), copyFR.getCreation_year());
+        FR.setAuthor("Aleksey");
+        FR.getAccess(0).setAmount(10000);
+        assertEquals(false, FR.equals(copyFR));
     }
     @Test
     public void TestToString() {

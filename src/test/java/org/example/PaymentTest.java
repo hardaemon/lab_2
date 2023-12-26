@@ -50,12 +50,7 @@ public class PaymentTest {
         Payment pay = new Payment(expectedName, expectedDate, expectedMonth, expectedYear, expectedAmount);
         //проверка на true
         boolean expectedTrue = true;
-        String expectedName2 = "Danila";
-        int expectedDate2 = 21;
-        int expectedMonth2 = 3;
-        int expectedYear2 = 2004;
-        int expectedAmount2 = 100253;
-        Payment pay2 = new Payment(expectedName2, expectedDate2, expectedMonth2, expectedYear2, expectedAmount2);
+        Payment pay2 = new Payment(expectedName, expectedDate, expectedMonth, expectedYear, expectedAmount);
         assertEquals(expectedTrue, pay.equals(pay2));
         //проверка на false
         boolean expectedFalse = false;
